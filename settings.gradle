@@ -1,0 +1,6 @@
+rootProject.name = 'spring-cloud-starter'
+include 'alibaba-cloud-server'
+include 'alibaba-cloud-client'
+include 'spring-cloud-client'
+include 'spring-cloud-server'
+

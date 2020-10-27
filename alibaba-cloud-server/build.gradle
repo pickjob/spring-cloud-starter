@@ -1,0 +1,28 @@
+plugins {
+    id "application"
+    id "org.springframework.boot" version "${springBootVersion}"
+    id "io.spring.dependency-management" version "1.0.10.RELEASE"
+}
+
+application {
+    mainClass = "spring.cloud.alibaba.server.AlibabaCloudServerApplication"
+}
+
+dependencies {
+    // alibaba cloud
+    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:${springCloudAlibabaVersion}"
+    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:${springCloudAlibabaVersion}"
+    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:${springCloudAlibabaVersion}"
+//    implementation "com.alibaba.cloud:spring-cloud-starter-dubbo:${springCloudAlibabaVersion}"
+//    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-seata:${springCloudAlibabaVersion}"
+//    implementation "com.alibaba.cloud:spring-cloud-starter-stream-rocketmq:${springCloudAlibabaVersion}"
+}
+
+run {
+    jvmArgs = [
+            "-Dfile.encoding=UTF-8",
+            "--enable-preview",
+            "-Xms500M",
+            "-Xmx700M"
+    ]
+}

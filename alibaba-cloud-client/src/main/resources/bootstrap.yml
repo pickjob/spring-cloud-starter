@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: alibaba-cloud-client
+    profiles:
+        active: dev
+    cloud:
+        nacos:
+            config:
+                server-addr: wsl2:8848
+                group: ALIBABA_NACOS
+                file-extension: yaml
+                namespace: f4636cf6-ab3e-464c-b910-b06d1e289e10
+                refresh-enabled: true
+            discovery:
+                server-addr: wsl2:8848
+                group: ALIBABA_NACOS
+                namespace: f4636cf6-ab3e-464c-b910-b06d1e289e10

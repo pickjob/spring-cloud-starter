@@ -1,0 +1,14 @@
+server:
+    port: 1120
+spring:
+    application:
+        name: alibaba-cloud-server
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+alibaba:
+    cloud:
+        server: alibaba-cloud-server
+        client: alibaba-cloud-client

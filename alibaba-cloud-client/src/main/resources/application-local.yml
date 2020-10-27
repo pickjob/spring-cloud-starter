@@ -1,0 +1,18 @@
+server:
+    port: 1110
+spring:
+    application:
+        name: alibaba-cloud-client
+    profiles:
+        active: dev
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+alibaba:
+    cloud:
+        server: alibaba-cloud-server
+        client: alibaba-cloud-client
+author:
+    name: pickjob@126.com
