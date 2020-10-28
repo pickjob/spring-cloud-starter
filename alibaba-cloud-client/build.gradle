@@ -12,10 +12,6 @@ dependencies {
     // alibaba cloud
     implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config"
     implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"
-    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel"
-//    implementation "com.alibaba.cloud:spring-cloud-starter-dubbo:${springCloudAlibabaVersion}"
-//    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-seata:${springCloudAlibabaVersion}"
-//    implementation "com.alibaba.cloud:spring-cloud-starter-stream-rocketmq:${springCloudAlibabaVersion}"
 }
 
 dependencyManagement {
@@ -27,6 +23,8 @@ dependencyManagement {
 run {
     jvmArgs = [
             "-Dfile.encoding=UTF-8",
+            "-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector",
+            "-DAsyncLogger.WaitStrategy=busyspin",
             "--enable-preview",
             "-Xms500M",
             "-Xmx700M"
