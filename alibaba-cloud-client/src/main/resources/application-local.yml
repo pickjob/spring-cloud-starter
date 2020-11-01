@@ -9,7 +9,7 @@ management:
     endpoints:
         web:
             exposure:
-                include: '*'
+                include: "*"
 alibaba:
     cloud:
         server: alibaba-cloud-server

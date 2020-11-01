@@ -3,11 +3,22 @@ server:
 spring:
     application:
         name: alibaba-cloud-server
+    cloud:
+        sentinel:
+            datasource:
+                ds1:
+                    nacos:
+                        server-addr: wsl2:8848
+                        data-id: alibaba-cloud-server-sentinel-flow
+                        group-id: ALIBABA_NACOS
+                        data-type: json
+                        rule-type: flow
+                        namespace: f4636cf6-ab3e-464c-b910-b06d1e289e10
 management:
     endpoints:
         web:
             exposure:
-                include: '*'
+                include: "*"
 alibaba:
     cloud:
         server: alibaba-cloud-server
