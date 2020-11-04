@@ -1,4 +1,4 @@
-package spring.cloud.alibaba.server.configuration;
+package cloud.starter.alibaba.cloud.server.configuration;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

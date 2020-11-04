@@ -1,4 +1,4 @@
-package spring.cloud.alibaba.server.util;
+package cloud.starter.alibaba.cloud.server.util;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import org.apache.logging.log4j.LogManager;

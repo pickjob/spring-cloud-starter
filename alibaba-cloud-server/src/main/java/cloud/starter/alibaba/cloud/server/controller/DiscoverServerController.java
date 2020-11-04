@@ -1,4 +1,4 @@
-package spring.cloud.alibaba.server.controller;
+package cloud.starter.alibaba.cloud.server.controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

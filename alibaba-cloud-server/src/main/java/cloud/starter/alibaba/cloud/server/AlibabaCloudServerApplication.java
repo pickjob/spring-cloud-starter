@@ -1,4 +1,4 @@
-package spring.cloud.alibaba.server;
+package cloud.starter.alibaba.cloud.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

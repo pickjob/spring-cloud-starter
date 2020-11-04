@@ -5,7 +5,7 @@ plugins {
 }
 
 application {
-    mainClass = "spring.cloud.alibaba.client.AlibabaCloudClientApplication"
+    mainClass = "cloud.starter.alibaba.cloud.client.AlibabaCloudClientApplication"
 }
 
 dependencies {

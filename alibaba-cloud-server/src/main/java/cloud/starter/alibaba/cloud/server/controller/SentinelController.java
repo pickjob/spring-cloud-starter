@@ -1,12 +1,12 @@
-package spring.cloud.alibaba.server.controller;
+package cloud.starter.alibaba.cloud.server.controller;
 
+import cloud.starter.alibaba.cloud.server.util.ExceptionUtils;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import spring.cloud.alibaba.server.util.ExceptionUtils;
 
 /**
  * @Description:
