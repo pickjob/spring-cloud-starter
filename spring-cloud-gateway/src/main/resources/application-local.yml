@@ -1,0 +1,25 @@
+server:
+    port: 2000
+management:
+    gateway:
+        enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+spring:
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true
+                    predicates:
+                      - Path='/v1/'+serviceId+'/**'
+                    filters:
+                      - RewritePath='/v1/' + serviceId + '/(?<remaining>.*)', '/v1//${remaining}'
+#                      - name: CircuitBreaker
+#                        args:
+#                            name: myCircuitBreaker
+#                            fallbackUri: forward:/404
+#                            statusCode:
+#                                - 404

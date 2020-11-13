@@ -1,0 +1,23 @@
+plugins {
+    id "application"
+}
+
+application {
+    mainClass = "cloud.starter.spring.cloud.config.server.SpringCloudConfigServerApplication"
+}
+
+dependencies {
+    // spring cloud
+    implementation "org.springframework.cloud:spring-cloud-config-server:${springCloudVersion}"
+}
+
+run {
+    jvmArgs = [
+            "-Dfile.encoding=UTF-8",
+            "-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector",
+            "-DAsyncLogger.WaitStrategy=busyspin",
+            "--enable-preview",
+            "-Xms500M",
+            "-Xmx700M"
+    ]
+}

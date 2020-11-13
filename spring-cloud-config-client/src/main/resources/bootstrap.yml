@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: spring-cloud-config-client
+    profiles:
+        active: dev
+    cloud:
+        config:
+            uri: http://localhost:2000
+            fail-fast: true
+            retry:
+                max-attempts: 5

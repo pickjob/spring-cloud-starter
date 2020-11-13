@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: spring-cloud-service
+    profiles:
+        active: dev
+    cloud:
+        zookeeper:
+            connect-string: wsl2:2181
+            config:
+                enabled: true
+                root: spring-cloud-config
+                profileSeparator: ":"
