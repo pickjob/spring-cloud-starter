@@ -16,10 +16,12 @@ spring:
                     predicates:
                       - Path='/v1/'+serviceId+'/**'
                     filters:
-                      - RewritePath='/v1/' + serviceId + '/(?<remaining>.*)', '/v1//${remaining}'
+                      - RewritePath='/v1/' + serviceId + '/(?<remaining>.*)', '/v1/${remaining}'
 #                      - name: CircuitBreaker
 #                        args:
 #                            name: myCircuitBreaker
 #                            fallbackUri: forward:/404
 #                            statusCode:
 #                                - 404
+    zipkin:
+        baseUrl: http://wsl2:9411
