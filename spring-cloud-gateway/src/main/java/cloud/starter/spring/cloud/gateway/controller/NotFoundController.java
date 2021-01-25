@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Author ws@yuan-mai.com
+ * @Author pickjob@126.com
  * @Date 2020-11-13
  */
 @RestController
